@@ -1,0 +1,642 @@
+<!DOCTYPE html><html lang="ko" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "primary-container": "#2563eb",
+        "secondary": "#4b41e1",
+        "on-secondary": "#ffffff",
+        "on-error-container": "#93000a",
+        "surface-tint": "#0053db",
+        "secondary-container": "#645efb",
+        "on-surface": "#131b2e",
+        "tertiary": "#632ecd",
+        "tertiary-fixed-dim": "#d0bcff",
+        "on-secondary-fixed-variant": "#3323cc",
+        "surface-container-lowest": "#ffffff",
+        "on-tertiary-fixed": "#23005c",
+        "inverse-on-surface": "#eef0ff",
+        "on-tertiary-container": "#f6edff",
+        "secondary-fixed": "#e2dfff",
+        "on-background": "#131b2e",
+        "surface-bright": "#faf8ff",
+        "tertiary-fixed": "#e9ddff",
+        "on-secondary-fixed": "#0f0069",
+        "tertiary-container": "#7d4ce7",
+        "surface-container-low": "#f2f3ff",
+        "on-tertiary-fixed-variant": "#5516be",
+        "on-primary": "#ffffff",
+        "on-error": "#ffffff",
+        "secondary-fixed-dim": "#c3c0ff",
+        "error-container": "#ffdad6",
+        "surface": "#faf8ff",
+        "on-secondary-container": "#fffbff",
+        "background": "#faf8ff",
+        "surface-dim": "#d2d9f4",
+        "outline": "#737686",
+        "primary-fixed": "#dbe1ff",
+        "primary": "#004ac6",
+        "surface-variant": "#dae2fd",
+        "on-primary-fixed": "#00174b",
+        "on-surface-variant": "#434655",
+        "outline-variant": "#c3c6d7",
+        "on-primary-fixed-variant": "#003ea8",
+        "surface-container-highest": "#dae2fd",
+        "inverse-primary": "#b4c5ff",
+        "on-primary-container": "#eeefff",
+        "surface-container-high": "#e2e7ff",
+        "on-tertiary": "#ffffff",
+        "error": "#ba1a1a",
+        "primary-fixed-dim": "#b4c5ff",
+        "surface-container": "#eaedff",
+        "inverse-surface": "#283044"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-sm": "0.75rem",
+        "space-xl": "2rem",
+        "space-sm": "0.5rem",
+        "gutter": "1.25rem",
+        "space-md": "1rem",
+        "margin-sm": "1rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "headline-md": ["Inter"],
+        "label-md": ["Inter"],
+        "headline-lg": ["Inter"],
+        "display-lg": ["Inter"],
+        "metric-val": ["Inter"],
+        "body-lg": ["Inter"],
+        "headline-sm": ["Inter"],
+        "body-md": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-lg-mobile": ["Inter"],
+        "body-sm": ["Inter"]
+      },
+      "fontSize": {
+        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-md": ["13px", {"lineHeight": "16px", "fontWeight": "500"}],
+        "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "metric-val": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+        "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-lowest border-b border-outline-variant/30"><div class="flex items-center gap-space-xs"><img alt="GraduAI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnbwJr7plaWo3cNeU0RBa6RuI-NXPYoMTsw0BiLDZtPDXW15i2ZT9vfWPC0pwc1zJl8cXgwyzr4jfBvFC7_RLPIGTDbu6n8rvyy7i4bntOmAO85-xyS4YdQYaXWW8d2L0OOdOutW4DBdFGUR1dZBlnYF-7Sc2t6DxsF9EaKKBQ_O0NKoxf4Dpv5XgFG5OdzS5XZEVQrolTmhKardx9Yeplip6xZUBXrktwK0CWgLZMFHodZUDzeyZ5rQ"><div class="flex flex-col ml-1"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">GraduAI</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Academic Admin</span></div></div><span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold tracking-wide">v2.4</span></div><div class="px-space-md py-2 bg-surface-container-low mx-space-md my-space-xs rounded-lg flex items-center justify-between text-body-sm"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-medium">학사 DB 동기화</span></div><span class="font-label-sm text-label-sm text-emerald-700 font-semibold">정상 (00:04전)</span></div><nav class="flex-1 px-space-sm py-space-sm space-y-3"><div class="space-y-1"><div class="px-space-md py-1 text-label-sm font-label-sm font-bold text-outline uppercase tracking-wider">학사 행정 관리</div><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="">관리자 대시보드</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg transition-colors bg-primary-container text-on-primary font-bold shadow-sm" data-path="student-management" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="">학생 관리</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="course-management" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="">과목 관리</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="academic-schedule" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span class="">학사 일정 관리</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="enrollment-policy" href="#"><span class="material-symbols-outlined text-[20px]">rule</span><span class="">수강 정책 관리</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="announcements" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span class="">공지사항 관리</span></a></div><div class="space-y-1 pt-1"><div class="px-space-md py-1 text-label-sm font-label-sm font-bold text-outline uppercase tracking-wider">시스템 및 보안</div><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="backup-restore" href="#"><span class="material-symbols-outlined text-[20px]">settings_backup_restore</span><span class="">백업 / 복구</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-operations" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="">운영 현황</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="">시스템 로그</span></a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface transition-colors" data-path="admin-accounts" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="">관리자 계정</span></a></div></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl space-y-space-sm border border-outline-variant/30"><div class="space-y-1"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-semibold text-on-surface">운영 DB 노드 #1</span><span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-emerald-50 text-emerald-700">CONNECTED</span></div><p class="font-label-sm text-label-sm text-on-surface-variant font-mono leading-tight">PostgreSQL 15.4 • latency 12ms</p><p class="font-label-sm text-label-sm text-outline font-mono">IP: 10.240.12.8</p></div><a class="w-full flex items-center justify-center gap-space-xs py-2 px-space-sm rounded-lg bg-surface-container-lowest text-error hover:bg-error-container hover:text-on-error-container font-label-md text-label-md transition-all shadow-[0_1px_8px_rgba(0,0,0,0.04)] font-medium" data-path="admin-login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span class="">로그아웃</span></a></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-fixed/40 text-primary font-label-sm text-label-sm font-semibold border border-primary-fixed"><span class="material-symbols-outlined text-[18px]">domain</span><span class="">성서캠퍼스 학사운영본부</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium"><span class="material-symbols-outlined text-[18px]">calendar_today</span><span class="">2025학년도 1학기 (정규)</span></div><div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-emerald-700 font-label-sm text-label-sm font-semibold"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="">ERP 연동 활성</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1"><button aria-label="시스템 알림" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button aria-label="도움말" class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">help</span></button></div><div class="h-6 w-[1px] bg-outline-variant hidden sm:block"></div><div class="flex items-center gap-2.5 cursor-pointer"><div class="flex flex-col text-right leading-tight"><span class="font-label-md text-label-md font-semibold text-on-surface">김관리 차장</span><span class="font-label-sm text-[11px] text-on-surface-variant">학사지원팀 • 마스터권한</span></div><img alt="김관리 차장" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VoH0LMl8yi21SZX7lUBiEyHzL4Dzj5Z2sJLHCnh1UWyyJPAozjyWyFjBrLxPv9PAfDqAr-araCASQt8D_Mb6SFsbdVb-pRTKJ_WwgyE8vGWD-QSbv3VWL9oCT_h_C_39nldiQwz5O2Lt5F7e70p9LdnHIK4WzDOdXBWk9Wlv7QDuj14oukMOVtwnvZ-zy91Xmk2E7ytj3SS6nrHZSUutrR6kYIRxoN9gohslrZlntptnFpw25zYRp1PJs"></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1720px] mx-auto w-full space-y-space-lg">
+<!-- Top Action & Overview Header -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">학생 관리</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">학적 DB 실시간 연동</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">등록된 전체 학생의 학적 정보, 이수 학점 및 AI 시간표 이용 상태를 관리합니다.</p>
+</div>
+<!-- Metric Pills & Sync Quick Action -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">전체 등록</span>
+<span class="font-metric-val text-headline-sm text-on-surface font-bold">1,248</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">명</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-xl">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">활성</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1,235</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">명</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-xl">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">비활성</span>
+<span class="font-headline-sm text-headline-sm text-error font-bold">13</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">명</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-surface-tint transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="">학사 DB 동기화</span>
+</button>
+</div>
+</div>
+<!-- Search & Multi-Filters Toolbar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Search Input -->
+<div class="md:col-span-6 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-11 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all" id="studentSearchInput" placeholder="이름 또는 학번 검색 (예: 신짱구, 20210001)" type="text" value="">
+</div>
+<!-- Academic Filters: Department & Grade -->
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full appearance-none pl-3.5 pr-10 py-2.5 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option value="ALL">전체 학과 (공과대학/인공지능대학)</option>
+<option selected="" value="CS">컴퓨터공학전공</option>
+<option value="AI">인공지능학과</option>
+<option value="SW">소프트웨어학부</option>
+<option value="DATA">인공지능데이터학과</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full appearance-none pl-3.5 pr-10 py-2.5 bg-surface-container-low rounded-lg font-label-md text-label-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer">
+<option value="ALL">전체 학년</option>
+<option value="1">1학년</option>
+<option value="2">2학년</option>
+<option selected="" value="3">3학년</option>
+<option value="4">4학년</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Secondary Filter Pills & Bulk Controls -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1.5 bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded font-label-md text-label-md bg-surface-container-lowest text-primary font-bold shadow-xs" type="button">전체 (1,248)</button>
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">활성 학생 (1,235)</button>
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">비활성 학생 (13)</button>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+            선택된 학생: <strong class="text-on-surface ml-0.5">신짱구 (20210001)</strong>
+</span>
+<button class="p-1.5 rounded-lg hover:bg-surface-container transition-colors" title="필터 초기화" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split: Student List (Left 7-8 cols) + Detail Panel (Right 4-5 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Student Table View (7 Cols on Large Desktop) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">학생 목록 명단</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">페이지당 20명</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="CSV 내보내기" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="정렬 기준 설정" type="button">
+<span class="material-symbols-outlined text-[20px]">sort</span>
+</button>
+</div>
+</div>
+<!-- High Density Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<tr>
+<th class="py-3 px-space-md">이름</th>
+<th class="py-3 px-space-sm">학번</th>
+<th class="py-3 px-space-sm">학과</th>
+<th class="py-3 px-space-sm">학년</th>
+<th class="py-3 px-space-sm">상태</th>
+<th class="py-3 px-space-sm">가입일</th>
+<th class="py-3 px-space-md text-right">관리</th>
+</tr>
+</thead>
+<tbody class="text-on-surface" id="studentTableBody">
+<!-- 1. 신짱구 (Selected Active Row) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-label-sm font-label-sm">
+                      신
+                    </div>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary flex items-center gap-1">
+                        신짱구
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">정상 재학</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-mono font-medium text-on-surface">20210001</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">컴퓨터공학전공</span>
+</td>
+<td class="py-3.5 px-space-sm font-medium">3학년</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>활성
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant font-mono text-[12px]">2024-03-02</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors shadow-xs" type="button">
+                    상세보기
+                  </button>
+</td>
+</tr>
+<!-- 2. 김철수 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-semibold text-label-sm font-label-sm">
+                      김
+                    </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">김철수</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">정상 재학</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-mono font-medium text-on-surface">20210042</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">컴퓨터공학전공</span>
+</td>
+<td class="py-3.5 px-space-sm font-medium">3학년</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>활성
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant font-mono text-[12px]">2024-03-02</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    상세보기
+                  </button>
+</td>
+</tr>
+<!-- 3. 한유리 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-semibold text-label-sm font-label-sm">
+                      한
+                    </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">한유리</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">정상 재학</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-mono font-medium text-on-surface">20220115</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">인공지능학과</span>
+</td>
+<td class="py-3.5 px-space-sm font-medium">2학년</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>활성
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant font-mono text-[12px]">2024-09-01</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    상세보기
+                  </button>
+</td>
+</tr>
+<!-- 4. 이훈이 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-semibold text-label-sm font-label-sm">
+                      이
+                    </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">이훈이</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">졸업유예/인턴</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-mono font-medium text-on-surface">20200088</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">소프트웨어학부</span>
+</td>
+<td class="py-3.5 px-space-sm font-medium">4학년</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>활성
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant font-mono text-[12px]">2023-03-05</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    상세보기
+                  </button>
+</td>
+</tr>
+<!-- 5. 박맹구 (Inactive Student) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group bg-surface-container-low/40">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-outline-variant text-on-surface-variant flex items-center justify-center font-semibold text-label-sm font-label-sm">
+                      박
+                    </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface-variant">박맹구</div>
+<span class="font-label-sm text-label-sm text-outline">일반휴학 중</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-mono font-medium text-on-surface-variant">20230230</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">컴퓨터공학전공</span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant">2학년</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>비활성
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-outline font-mono text-[12px]">2024-03-04</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    상세보기
+                  </button>
+</td>
+</tr>
+<!-- 6. 서단비 -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-semibold text-label-sm font-label-sm">
+                      서
+                    </div>
+<div>
+<div class="font-label-md text-label-md font-semibold text-on-surface">서단비</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">정상 신입</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm font-mono font-medium text-on-surface">20240012</td>
+<td class="py-3.5 px-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">인공지능데이터</span>
+</td>
+<td class="py-3.5 px-space-sm font-medium">1학년</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>활성
+                  </span>
+</td>
+<td class="py-3.5 px-space-sm text-on-surface-variant font-mono text-[12px]">2025-03-02</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-medium transition-colors" type="button">
+                    상세보기
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Controls -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            전체 <strong class="text-on-surface">1,248</strong>명 중 <span class="font-semibold text-on-surface">1 - 6</span>번째 학생 표시
+          </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center text-outline hover:bg-surface-container hover:text-on-surface transition-colors" title="이전 페이지" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-xs" type="button">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">3</button>
+<span class="px-1.5 text-outline text-label-sm">...</span>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium transition-colors" type="button">125</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" title="다음 페이지" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right 5-Col: Student Detail Panel (신짱구 20210001) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col relative">
+<!-- Header Banner with Contextual Visuals -->
+<div class="bg-gradient-to-r from-primary to-secondary p-space-md text-on-primary relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-36 h-36 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-xl bg-surface-container-lowest text-primary font-headline-md text-headline-md font-bold flex items-center justify-center shadow-md">
+                신
+              </div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md font-bold text-on-primary">신짱구</h2>
+<span class="font-mono text-label-md bg-white/20 px-2 py-0.5 rounded text-on-primary font-medium">20210001</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary/80">공과대학 컴퓨터공학전공 3학년 (주간)</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-400/20 text-emerald-100 font-label-sm text-label-sm font-semibold backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-300"></span>활성 계정
+            </span>
+</div>
+</div>
+<div class="p-space-lg space-y-space-lg flex-1">
+<!-- Key Metrics: Credit Fulfilment Progress (120 / 130 Credits) -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">졸업 요건 이수율</span>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-metric-val text-headline-lg text-primary font-bold">120</span>
+<span class="font-label-md text-label-md text-outline">/ 130 학점</span>
+</div>
+</div>
+<!-- SVG Donut Progress Metric -->
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary transition-all duration-1000 ease-out" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92.3, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">92.3%</span>
+</div>
+</div>
+</div>
+<!-- Graduation Track Progress Bar Breakdown -->
+<div class="space-y-space-xs">
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 46.1%;" title="전공학점 (60학점)"></div>
+<div class="bg-secondary h-full" style="width: 21.5%;" title="교양학점 (28학점)"></div>
+<div class="bg-tertiary-container h-full" style="width: 24.6%;" title="기타자선/일반선택 (32학점)"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span>전공 60/66</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span>교양 28/30</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span>일선 32/34</span>
+</div>
+</div>
+</div>
+<!-- Academic Credit Detailed Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Major Credits Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">전공 학점</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">60 / 66</span>
+</div>
+<div class="space-y-1 pt-1 font-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span class="">전공필수 (전필)</span>
+<strong class="text-on-surface">24 학점</strong>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="">전공선택 (전선)</span>
+<strong class="text-on-surface">36 학점</strong>
+</div>
+<p class="font-label-sm text-label-sm text-secondary font-medium pt-1">✓ 잔여 전공선택 6학점 필요</p>
+</div>
+</div>
+<!-- General Electives Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">교양 학점</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">28 / 30</span>
+</div>
+<div class="space-y-1 pt-1 font-body-sm text-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span class="">교양필수</span>
+<strong class="text-on-surface">10 학점</strong>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="">균형교양</span>
+<strong class="text-on-surface">12 학점</strong>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="">일반교양</span>
+<strong class="text-on-surface">6 학점</strong>
+</div>
+</div>
+</div>
+</div>
+<!-- Account & Security Metadata Table -->
+<div class="space-y-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">시스템 보안 및 접속 메타데이터</span>
+<div class="bg-surface-container-low rounded-xl p-space-md space-y-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">계정 인증 상태</span>
+<span class="inline-flex items-center gap-1 font-semibold text-emerald-700">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>정상 활성 (Active)
+                </span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">가입 일자</span>
+<span class="font-mono text-on-surface">2024-03-02 09:34:11</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">마지막 로그인</span>
+<span class="font-mono text-on-surface text-right">2026-10-05 18:15:22 <span class="text-outline">(IP: 165.132.88.21)</span></span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">비밀번호 관리</span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+                  보안 암호화 저장됨 (접근 불가)
+                </span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="text-on-surface-variant">AI 추천 시간표 슬롯</span>
+<span class="font-semibold text-primary">3개 세트 생성 완료</span>
+</div>
+</div>
+</div>
+<!-- Academic Visual Reference Mock -->
+<div class="rounded-xl overflow-hidden bg-surface-container-high relative p-space-md flex items-center justify-between">
+<div class="space-y-1 max-w-[70%]">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">GraduAI 연산 모델</span>
+<p class="font-headline-sm text-body-lg font-bold text-on-surface">2026-2학기 수강 추천안</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">전공 3과목(9학점) 및 균형교양 1과목(3학점) 자동 밸런싱 준비 완료</p>
+</div>
+<img class="w-16 h-16 rounded-lg object-cover shadow-sm" data-alt="A clean modern academic analytics dashboard interface showcasing a visual timetable matrix with blue and indigo schedule blocks and credit tracking metrics on an ultra sharp display screen, ambient studio lighting with minimal aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNc6ajhTPtiL8cy_A-cffLlsrq_zsA6u0BiBndL78fQgsG5mR-7LAADiNh67RTxYTB5F0ofrKiV71rWbiZ1TicUp2eYxq-1DgDtATa-2Gw-RuRebWjGmAIhS2sft5yDxFDzuaECsMQfeiet0iq-D2iT2lvLYNnpUo4qawPyEeuTu2x08fIxyGieDp8WInaR6NgQ-IJ8agEBdTpNyofTgSOh6OSeJjBbBXnKenkm7a6YfFLayrP7Fzv">
+</div>
+<!-- Administrator Account Actions -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_apps_script</span>
+<span class="">저장된 시간표 조회</span>
+</button>
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-primary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span class="">학적 동기화 재요청</span>
+</button>
+</div>
+<!-- Danger/State Toggle Action -->
+<div class="pt-space-xs">
+<button class="w-full flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-lg bg-error-container/40 text-on-error-container hover:bg-error-container font-label-md text-label-md transition-colors" id="toggleStatusBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span class="">계정 비활성화 (임시 수강정지)</span>
+</button>
+<p class="font-label-sm text-label-sm text-outline text-center mt-1.5">
+                계정 비활성화 시 학생의 AI 시간표 생성 및 포털 연동이 즉시 중단됩니다.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for Search Filtering & Account Action feedback -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('studentSearchInput');
+      const tableBody = document.getElementById('studentTableBody');
+      const rows = tableBody.querySelectorAll('tr');
+      const toggleStatusBtn = document.getElementById('toggleStatusBtn');
+
+      // Instant live filter mock
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.trim().toLowerCase();
+          rows.forEach((row) => {
+            const text = row.innerText.toLowerCase();
+            if (!query || text.includes(query)) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        });
+      }
+
+      // Action button mock feedback
+      if (toggleStatusBtn) {
+        toggleStatusBtn.addEventListener('click', () => {
+          const isDeactivated = toggleStatusBtn.dataset.state === 'inactive';
+          if (!isDeactivated) {
+            if (confirm('신짱구 (20210001) 학생 계정을 비활성화하시겠습니까?')) {
+              toggleStatusBtn.dataset.state = 'inactive';
+              toggleStatusBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check_circle</span><span>계정 활성화 (정상 재개)</span>';
+              toggleStatusBtn.className = 'w-full flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md transition-colors shadow-sm';
+            }
+          } else {
+            toggleStatusBtn.dataset.state = 'active';
+            toggleStatusBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">block</span><span>계정 비활성화 (임시 수강정지)</span>';
+            toggleStatusBtn.className = 'w-full flex items-center justify-center gap-1.5 py-2.5 px-space-sm rounded-lg bg-error-container/40 text-on-error-container hover:bg-error-container font-label-md text-label-md transition-colors';
+          }
+        });
+      }
+    });
+  </script>
+</div></main></div>
+
+
+
+</body></html>

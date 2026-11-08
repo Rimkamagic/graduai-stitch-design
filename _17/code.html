@@ -1,0 +1,735 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","secondary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3323cc","secondary-container":"#645efb","surface-container-highest":"#dae2fd","on-tertiary-fixed":"#23005c","error-container":"#ffdad6","secondary-fixed":"#e2dfff","background":"#faf8ff","outline":"#737686","primary":"#004ac6","surface-bright":"#faf8ff","on-background":"#131b2e","on-primary-container":"#eeefff","outline-variant":"#c3c6d7","tertiary-fixed-dim":"#d0bcff","on-error":"#ffffff","tertiary-container":"#7d4ce7","error":"#ba1a1a","on-primary-fixed":"#00174b","surface":"#faf8ff","surface-dim":"#d2d9f4","on-tertiary":"#ffffff","inverse-surface":"#283044","surface-container":"#eaedff","on-primary":"#ffffff","primary-fixed-dim":"#b4c5ff","on-tertiary-fixed-variant":"#5516be","tertiary":"#632ecd","primary-container":"#2563eb","on-surface-variant":"#434655","on-tertiary-container":"#f6edff","surface-variant":"#dae2fd","on-secondary-container":"#fffbff","inverse-primary":"#b4c5ff","surface-container-high":"#e2e7ff","on-secondary-fixed":"#0f0069","surface-tint":"#0053db","primary-fixed":"#dbe1ff","on-primary-fixed-variant":"#003ea8","on-surface":"#131b2e","secondary":"#4b41e1","surface-container-lowest":"#ffffff","inverse-on-surface":"#eef0ff","on-error-container":"#93000a","on-secondary":"#ffffff","tertiary-fixed":"#e9ddff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-sm":"0.75rem","margin-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","space-xl":"2rem","space-xs":"0.25rem",gutter:"1.25rem","space-lg":"1.5rem",margin:"2rem"},fontFamily:{"body-md":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"metric-val":["Inter"],"headline-lg-mobile":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"metric-val":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col min-h-0"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnbwJr7plaWo3cNeU0RBa6RuI-NXPYoMTsw0BiLDZtPDXW15i2ZT9vfWPC0pwc1zJl8cXgwyzr4jfBvFC7_RLPIGTDbu6n8rvyy7i4bntOmAO85-xyS4YdQYaXWW8d2L0OOdOutW4DBdFGUR1dZBlnYF-7Sc2t6DxsF9EaKKBQ_O0NKoxf4Dpv5XgFG5OdzS5XZEVQrolTmhKardx9Yeplip6xZUBXrktwK0CWgLZMFHodZUDzeyZ5rQ"><div class="flex flex-col truncate"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold tracking-tight">GraduAI</span><span class="font-label-sm text-label-sm text-on-surface-variant">Academic Admin</span></div></div><span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">v2.4</span></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">학사 DB 동기화</span></div><span class="font-label-sm text-label-sm text-primary font-medium">정상 (00:04전)</span></div></div><nav class="flex-1 px-space-sm py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">학사 행정 관리</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>관리자 대시보드</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="student-management" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>학생 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="course-management" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>과목 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="academic-calendar" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span>학사 일정 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="curriculum-policy" href="#"><span class="material-symbols-outlined text-[20px]">rule</span><span>수강 정책 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="notices-management" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span>공지사항 관리</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">시스템 및 보안</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="backup-restore" href="#"><span class="material-symbols-outlined text-[20px]">settings_backup_restore</span><span>백업 / 복구</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="operations-status" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>운영 현황</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="system-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>시스템 로그</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="admin-accounts" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>관리자 계정</span></a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">운영 DB 노드 #1</span><span class="px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-[10px] font-bold">CONNECTED</span></div><div class="text-[11px] text-outline truncate">PostgreSQL 15.4 • latency 12ms</div><div class="pt-1 flex items-center justify-between border-t border-outline-variant/30"><button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error hover:underline transition-all"><span class="material-symbols-outlined text-[16px]">logout</span>로그아웃</button><span class="font-label-sm text-[10px] text-outline">IP: 10.240.12.8</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium"><span class="material-symbols-outlined text-primary text-[18px]">apartment</span><span>성서캠퍼스 학사운영본부</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[16px]">calendar_month</span><span>2025학년도 1학기 (정규)</span></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span>ERP 연동 활성</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button></div><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right leading-tight"><span class="font-label-md text-label-md font-semibold text-on-surface">김관리 차장</span><span class="font-label-sm text-[11px] text-on-surface-variant">학사지원팀 • 마스터권한</span></div><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VoH0LMl8yi21SZX7lUBiEyHzL4Dzj5Z2sJLHCnh1UWyyJPAozjyWyFjBrLxPv9PAfDqAr-araCASQt8D_Mb6SFsbdVb-pRTKJ_WwgyE8vGWD-QSbv3VWL9oCT_h_C_39nldiQwz5O2Lt5F7e70p9LdnHIK4WzDOdXBWk9Wlv7QDuj14oukMOVtwnvZ-zy91Xmk2E7ytj3SS6nrHZSUutrR6kYIRxoN9gohslrZlntptnFpw25zYRp1PJs"></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-gutter lg:p-margin flex flex-col gap-space-lg">
+<!-- Header Section with Live Status & Actions -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Audit &amp; Security Telemetry</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-normal">SHA-256 Chain Verified</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">시스템 로그</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          관리자 및 시스템 주요 활동, 데이터베이스 트랜잭션, 감사 기록을 실시간 모니터링합니다. 
+          <span class="text-outline font-label-md">(보안 규정에 따라 비밀번호 등 민감정보는 마스킹 처리됨)</span>
+</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold shadow-sm hover:bg-surface-container transition-all" id="streamToggleBtn" type="button">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+</span>
+<span id="streamStatusText">로그 실시간 스트림 ON</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:bg-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>로그 CSV 내보내기</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics & Visual Telemetry Banner -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase">금일 총 트랜잭션</span>
+<span class="material-symbols-outlined text-primary text-[20px]">dataset</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-val text-metric-val text-on-surface font-bold">148,290</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold">+12.4%</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-label-sm text-[11px] text-outline">
+<span>실시간 인덱싱 완료율</span>
+<span class="font-semibold text-on-surface">99.98%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 98%;"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase">관리자 행정 접근</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">shield_person</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-val text-metric-val text-on-surface font-bold">428</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">100% 정상</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-label-sm text-[11px] text-outline">
+<span>2차 인증(2FA) 적용율</span>
+<span class="font-semibold text-emerald-600">완전 적용 (MFA)</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase">AI 분산 연산 큐</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">smart_toy</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-val text-metric-val text-on-surface font-bold">14ms</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold">초고속 최적화</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between font-label-sm text-[11px] text-outline">
+<span>충돌 매트릭스 갱신주기</span>
+<span class="font-semibold text-on-surface">30분 자동</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- Metric 4: Real-time Sparkline Visualization -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-semibold uppercase">감사 로그 보존 용량</span>
+<span class="material-symbols-outlined text-outline text-[20px]">history_toggle_off</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div>
+<div class="font-metric-val text-metric-val text-on-surface font-bold">18.4 <span class="font-headline-sm text-headline-sm font-medium text-outline">GB</span></div>
+<div class="font-label-sm text-[11px] text-outline">암호화 스토리지 (보존 3년)</div>
+</div>
+<svg class="w-20 h-10 text-primary" fill="none" preserveAspectRatio="none" viewBox="0 0 100 40">
+<path d="M0 32 Q15 35 25 22 T50 25 T75 12 T100 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0 32 Q15 35 25 22 T50 25 T75 12 T100 18 L100 40 L0 40 Z" fill="currentColor" opacity="0.08"></path>
+</svg>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 24%;"></div>
+</div>
+</div>
+</div>
+<!-- Filter & Query Control Center -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-end">
+<!-- Filter 1: 주체 구분 -->
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">person_outline</span>
+            주체 구분
+          </label>
+<div class="flex items-center p-1 rounded-xl bg-surface-container-low">
+<button class="filter-tab-actor flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg bg-surface-container-lowest text-on-surface font-semibold shadow-xs transition-all" data-actor="all" type="button">전체</button>
+<button class="filter-tab-actor flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-actor="관리자" type="button">관리자</button>
+<button class="filter-tab-actor flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-actor="시스템" type="button">시스템</button>
+<button class="filter-tab-actor flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-actor="학생" type="button">학생</button>
+</div>
+</div>
+<!-- Filter 2: 작업 유형 -->
+<div class="lg:col-span-3 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">category</span>
+            작업 유형
+          </label>
+<select class="w-full px-space-sm py-2 rounded-xl bg-surface-container-low text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer" id="actionTypeFilter">
+<option value="all">전체 (전체 작업 카테고리)</option>
+<option value="과목 관리">과목 관리</option>
+<option value="학사 일정">학사 일정</option>
+<option value="공지 등록">공지사항 관리</option>
+<option value="자동 백업">DB 백업 / 복구</option>
+<option value="학생 관리">학생 관리</option>
+<option value="수강 정책">수강 정책</option>
+<option value="계정 관리">계정 관리</option>
+<option value="AI 엔진">AI 엔진</option>
+</select>
+</div>
+<!-- Filter 3: 결과 -->
+<div class="lg:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+            결과 상태
+          </label>
+<div class="flex items-center p-1 rounded-xl bg-surface-container-low">
+<button class="filter-tab-status flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg bg-surface-container-lowest text-on-surface font-semibold shadow-xs transition-all" data-status="all" type="button">전체</button>
+<button class="filter-tab-status flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-status="성공" type="button">성공</button>
+<button class="filter-tab-status flex-1 py-1.5 text-center font-label-md text-label-md rounded-lg text-on-surface-variant hover:text-on-surface transition-all" data-status="실패" type="button">실패/경고</button>
+</div>
+</div>
+<!-- Filter 4: Unified Search Field -->
+<div class="lg:col-span-4 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">search</span>
+            로그 통합 검색
+          </label>
+<div class="relative flex items-center">
+<input class="w-full pl-10 pr-space-md py-2 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" id="logSearchInput" placeholder="작업 상세, 대상 객체명, IP 주소, 사번 입력..." type="text">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">search</span>
+<button class="hidden absolute right-3 text-outline hover:text-on-surface" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Filter Pills & Active Summary -->
+<div class="flex items-center justify-between pt-2 border-t border-surface-container flex-wrap gap-space-sm text-outline font-label-sm text-[12px]">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-semibold text-on-surface-variant">빠른 필터:</span>
+<button class="quick-pill px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors" data-tag="김관리" type="button"># 김관리 차장</button>
+<button class="quick-pill px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors" data-tag="CSE3012" type="button"># CSE3012</button>
+<button class="quick-pill px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors" data-tag="165.132" type="button"># 학내망 IP (165.132.*)</button>
+<button class="quick-pill px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors" data-tag="AI 엔진" type="button"># AI 엔진 인덱싱</button>
+</div>
+<div class="flex items-center gap-2 font-medium">
+<span>검색 결과: <strong class="text-primary font-bold" id="logCountDisplay">7</strong> 건</span>
+<span>•</span>
+<span>최종 갱신: 방금 전 (<span id="lastSyncTime">18:30:11</span>)</span>
+</div>
+</div>
+</div>
+<!-- Audit Logs Main Data Table (Card Structure) -->
+<div class="rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md font-semibold select-none">
+<th class="py-3.5 px-space-md whitespace-nowrap" scope="col">
+<div class="flex items-center gap-1">
+<span>일시 (시간)</span>
+<span class="material-symbols-outlined text-[14px] text-outline">schedule</span>
+</div>
+</th>
+<th class="py-3.5 px-space-sm whitespace-nowrap" scope="col">주체</th>
+<th class="py-3.5 px-space-md whitespace-nowrap" scope="col">주체명 (사번/ID)</th>
+<th class="py-3.5 px-space-sm whitespace-nowrap" scope="col">구분</th>
+<th class="py-3.5 px-space-md whitespace-nowrap min-w-[280px]" scope="col">작업 상세 내용</th>
+<th class="py-3.5 px-space-md whitespace-nowrap" scope="col">대상 객체</th>
+<th class="py-3.5 px-space-md whitespace-nowrap" scope="col">IP 주소</th>
+<th class="py-3.5 px-space-md text-center whitespace-nowrap" scope="col">결과</th>
+<th class="py-3.5 px-space-sm text-center whitespace-nowrap w-12" scope="col">감사</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface" id="logsTableBody">
+<!-- Row 1: System Auto Backup -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="자동 백업" data-actor="시스템" data-search="18:30:11 시스템 System_Auto 자동 백업 정기 스냅샷 데이터베이스 백업 수행 timetable.db 42.8MB 127.0.0.1 Internal" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">18:30:11</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">dns</span>
+                  시스템
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-surface-container flex items-center justify-center text-[11px] font-bold text-secondary">SA</span>
+<span class="font-label-md text-label-md">System_Auto</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">자동 백업</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">save</span>
+<span>정기 스냅샷 데이터베이스 백업 수행</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<code class="px-2 py-1 rounded bg-surface-container-low text-primary font-mono text-[12px] font-semibold">timetable.db (42.8MB)</code>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-outline font-mono text-[12px]">
+                127.0.0.1 <span class="text-[10px] text-outline-variant">(Internal)</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold border-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+<!-- Row 2: Admin Notice Announcement -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="공지 등록" data-actor="관리자" data-search="18:25:04 관리자 김관리 admin_01 공지 등록 신규 학사 공지사항 게시 2026-2학기 수강신청 사전 안내 165.132.88.21" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">18:25:04</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+                  관리자
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-primary-fixed/40 flex items-center justify-center text-[11px] font-bold text-primary">김</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md">김관리</span>
+<span class="text-[10px] text-outline">admin_01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">공지 등록</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">campaign</span>
+<span>신규 학사 공지사항 게시</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="font-label-md text-label-md text-on-surface-variant truncate max-w-xs inline-block" title="2026-2학기 수강신청 사전 안내">2026-2학기 수강신청 사전 안내</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-on-surface-variant font-mono text-[12px]">
+                165.132.88.21
+              </td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+<!-- Row 3: Admin Course Edit -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="과목 관리" data-actor="관리자" data-search="18:21:40 관리자 김관리 admin_01 과목 수정 전공필수 과목 강의실 및 시간 정보 변경 CSE3012 소프트웨어공학 165.132.88.21" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">18:21:40</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+                  관리자
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-primary-fixed/40 flex items-center justify-center text-[11px] font-bold text-primary">김</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md">김관리</span>
+<span class="text-[10px] text-outline">admin_01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">과목 관리</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-amber-600 text-[16px]">edit_calendar</span>
+<span>전공필수 과목 강의실 및 시간 정보 변경</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="font-mono text-primary font-semibold text-[12px]">CSE3012</span>
+<span class="text-outline text-label-sm">(소프트웨어공학)</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-on-surface-variant font-mono text-[12px]">
+                165.132.88.21
+              </td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+<!-- Row 4: Student Data Sync -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="학생 관리" data-actor="관리자" data-search="18:14:22 관리자 이학사 admin_03 학생 관리 특정 학생 학적 정보 수동 동기화 요청 신짱구 20210001 165.132.88.35" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">18:14:22</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+                  관리자
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-surface-container-high flex items-center justify-center text-[11px] font-bold text-on-surface">이</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md">이학사</span>
+<span class="text-[10px] text-outline">admin_03</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">학생 관리</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-blue-600 text-[16px]">sync</span>
+<span>특정 학생 학적 정보 수동 동기화 요청</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex items-center gap-1">
+<span class="font-medium text-on-surface">신짱구</span>
+<span class="text-outline font-mono text-[12px]">(20210001)</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-on-surface-variant font-mono text-[12px]">
+                165.132.88.35
+              </td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+<!-- Row 5: Curriculum Policy Check -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="수강 정책" data-actor="관리자" data-search="17:58:09 관리자 김관리 admin_01 수강 정책 2026-2학기 최대 신청 학점 상한선 규칙 검토 Credit_Policy_Rule 165.132.88.21" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">17:58:09</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+                  관리자
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-primary-fixed/40 flex items-center justify-center text-[11px] font-bold text-primary">김</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md">김관리</span>
+<span class="text-[10px] text-outline">admin_01</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">수강 정책</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-purple-600 text-[16px]">policy</span>
+<span>2026-2학기 최대 신청 학점 상한선 규칙 검토</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<code class="px-2 py-1 rounded bg-surface-container-low text-tertiary font-mono text-[12px] font-semibold">Credit_Policy_Rule</code>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-on-surface-variant font-mono text-[12px]">
+                165.132.88.21
+              </td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+<!-- Row 6: AI Engine Matrix Indexing -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="AI 엔진" data-actor="시스템" data-search="17:42:15 시스템 GraduAI_Core AI 엔진 추천 알고리즘 과목 충돌 매트릭스 인덱싱 갱신 Matrix_Engine_v4.2 Server_Local" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">17:42:15</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span>
+                  시스템
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-tertiary/10 flex items-center justify-center text-[11px] font-bold text-tertiary">AI</span>
+<span class="font-label-md text-label-md">GraduAI_Core</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">AI 엔진</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[16px]">hub</span>
+<span>추천 알고리즘 과목 충돌 매트릭스 인덱싱 갱신</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<code class="px-2 py-1 rounded bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono text-[12px] font-semibold">Matrix_Engine_v4.2</code>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-outline font-mono text-[12px]">
+                Server_Local
+              </td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+<!-- Row 7: Account Security 2FA -->
+<tr class="log-row hover:bg-surface-container-low/70 transition-colors cursor-pointer group" data-action="계정 관리" data-actor="관리자" data-search="16:30:02 관리자 박보안 admin_sec 계정 관리 관리자 로그인 2차 인증 성공 admin_academic 165.132.89.12" data-status="성공">
+<td class="py-3 px-space-md whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">16:30:02</span>
+<span class="text-[11px] text-outline font-label-sm">2025.04.14</span>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+                  관리자
+                </span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-6 h-6 rounded-md bg-primary-fixed/40 flex items-center justify-center text-[11px] font-bold text-primary">박</span>
+<div class="flex flex-col leading-tight">
+<span class="font-label-md text-label-md">박보안</span>
+<span class="text-[10px] text-outline">admin_sec</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm whitespace-nowrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">계정 관리</span>
+</td>
+<td class="py-3 px-space-md text-on-surface font-normal">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-600 text-[16px]">phonelink_lock</span>
+<span>관리자 로그인 2차 인증 성공</span>
+</div>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap">
+<span class="font-mono text-[12px] text-on-surface font-medium">admin_academic</span>
+</td>
+<td class="py-3 px-space-md whitespace-nowrap text-on-surface-variant font-mono text-[12px]">
+                165.132.89.12
+              </td>
+<td class="py-3 px-space-md whitespace-nowrap text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  성공
+                </span>
+</td>
+<td class="py-3 px-space-sm text-center text-outline group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm border-t border-surface-container-low">
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span>페이지 당 표시:</span>
+<select class="bg-surface-container-low px-2 py-1 rounded text-on-surface font-medium focus:outline-none">
+<option>10개</option>
+<option selected="">20개</option>
+<option>50개</option>
+<option>100개</option>
+</select>
+<span class="ml-2">1 - 7 of 7 항목</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container disabled:opacity-30" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container disabled:opacity-30" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center shadow-xs" type="button">1</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container disabled:opacity-30" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:bg-surface-container disabled:opacity-30" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security Compliance Notice Footer Banner -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center gap-space-md text-on-surface-variant">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div class="flex-1 flex flex-col gap-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">보안 감사 및 개인정보보호 준수 고지</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          개인정보보호법 및 대학 정보보안 지침에 따라 비밀번호, 주민번호 등 민감 식별정보는 로그에 기록되지 않으며 모든 접속 및 변경 이력은 3년간 위변조 방지 보관됩니다.
+        </p>
+</div>
+<div class="shrink-0 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-mono text-[11px] font-semibold">ISO/IEC 27001</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-on-surface font-mono text-[11px] font-semibold">ISMS-P</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive filter logic for audit table
+  (function() {
+    const actorTabs = document.querySelectorAll('.filter-tab-actor');
+    const statusTabs = document.querySelectorAll('.filter-tab-status');
+    const actionSelect = document.getElementById('actionTypeFilter');
+    const searchInput = document.getElementById('logSearchInput');
+    const clearBtn = document.getElementById('clearSearchBtn');
+    const rows = document.querySelectorAll('.log-row');
+    const countDisplay = document.getElementById('logCountDisplay');
+    const streamToggleBtn = document.getElementById('streamToggleBtn');
+    const streamStatusText = document.getElementById('streamStatusText');
+    const quickPills = document.querySelectorAll('.quick-pill');
+
+    let currentActor = 'all';
+    let currentStatus = 'all';
+    let currentAction = 'all';
+    let currentSearch = '';
+    let isStreaming = true;
+
+    function applyFilters() {
+      let visibleCount = 0;
+      rows.forEach(row => {
+        const actor = row.getAttribute('data-actor');
+        const action = row.getAttribute('data-action');
+        const status = row.getAttribute('data-status');
+        const searchText = row.getAttribute('data-search').toLowerCase();
+
+        const matchActor = (currentActor === 'all') || (actor === currentActor);
+        const matchAction = (currentAction === 'all') || (action === currentAction);
+        const matchStatus = (currentStatus === 'all') || (status === currentStatus);
+        const matchSearch = (!currentSearch) || searchText.includes(currentSearch.toLowerCase());
+
+        if (matchActor && matchAction && matchStatus && matchSearch) {
+          row.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+
+      if (countDisplay) {
+        countDisplay.textContent = visibleCount;
+      }
+    }
+
+    actorTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        actorTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-xs');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-xs');
+        tab.classList.remove('text-on-surface-variant');
+        currentActor = tab.getAttribute('data-actor');
+        applyFilters();
+      });
+    });
+
+    statusTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        statusTabs.forEach(t => {
+          t.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-xs');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-xs');
+        tab.classList.remove('text-on-surface-variant');
+        currentStatus = tab.getAttribute('data-status');
+        applyFilters();
+      });
+    });
+
+    if (actionSelect) {
+      actionSelect.addEventListener('change', (e) => {
+        currentAction = e.target.value;
+        applyFilters();
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value.trim();
+        if (clearBtn) {
+          clearBtn.classList.toggle('hidden', currentSearch.length === 0);
+        }
+        applyFilters();
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearch = '';
+        clearBtn.classList.add('hidden');
+        applyFilters();
+      });
+    }
+
+    quickPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const tag = pill.getAttribute('data-tag');
+        searchInput.value = tag;
+        currentSearch = tag;
+        if (clearBtn) clearBtn.classList.remove('hidden');
+        applyFilters();
+      });
+    });
+
+    // Stream toggle micro-interaction
+    if (streamToggleBtn) {
+      streamToggleBtn.addEventListener('click', () => {
+        isStreaming = !isStreaming;
+        const pingIndicator = streamToggleBtn.querySelector('.animate-ping');
+        const staticDot = streamToggleBtn.querySelector('.rounded-full.bg-emerald-500, .rounded-full.bg-slate-400');
+
+        if (isStreaming) {
+          streamStatusText.textContent = '로그 실시간 스트림 ON';
+          if (pingIndicator) pingIndicator.classList.remove('hidden');
+          if (staticDot) {
+            staticDot.classList.remove('bg-slate-400');
+            staticDot.classList.add('bg-emerald-500');
+          }
+        } else {
+          streamStatusText.textContent = '로그 스트림 일시중지됨';
+          if (pingIndicator) pingIndicator.classList.add('hidden');
+          if (staticDot) {
+            staticDot.classList.remove('bg-emerald-500');
+            staticDot.classList.add('bg-slate-400');
+          }
+        }
+      });
+    }
+
+  })();
+</script></main></div></body></html>

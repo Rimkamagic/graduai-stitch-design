@@ -1,0 +1,533 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f2f3ff","secondary-fixed-dim":"#c3c0ff","on-secondary-fixed-variant":"#3323cc","secondary-container":"#645efb","surface-container-highest":"#dae2fd","on-tertiary-fixed":"#23005c","error-container":"#ffdad6","secondary-fixed":"#e2dfff","background":"#faf8ff","outline":"#737686","primary":"#004ac6","surface-bright":"#faf8ff","on-background":"#131b2e","on-primary-container":"#eeefff","outline-variant":"#c3c6d7","tertiary-fixed-dim":"#d0bcff","on-error":"#ffffff","tertiary-container":"#7d4ce7","error":"#ba1a1a","on-primary-fixed":"#00174b","surface":"#faf8ff","surface-dim":"#d2d9f4","on-tertiary":"#ffffff","inverse-surface":"#283044","surface-container":"#eaedff","on-primary":"#ffffff","primary-fixed-dim":"#b4c5ff","on-tertiary-fixed-variant":"#5516be","tertiary":"#632ecd","primary-container":"#2563eb","on-surface-variant":"#434655","on-tertiary-container":"#f6edff","surface-variant":"#dae2fd","on-secondary-container":"#fffbff","inverse-primary":"#b4c5ff","surface-container-high":"#e2e7ff","on-secondary-fixed":"#0f0069","surface-tint":"#0053db","primary-fixed":"#dbe1ff","on-primary-fixed-variant":"#003ea8","on-surface":"#131b2e","secondary":"#4b41e1","surface-container-lowest":"#ffffff","inverse-on-surface":"#eef0ff","on-error-container":"#93000a","on-secondary":"#ffffff","tertiary-fixed":"#e9ddff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-sm":"0.75rem","margin-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","space-xl":"2rem","space-xs":"0.25rem",gutter:"1.25rem","space-lg":"1.5rem",margin:"2rem"},fontFamily:{"body-md":["Inter"],"display-lg":["Inter"],"headline-sm":["Inter"],"headline-md":["Inter"],"label-sm":["Inter"],"body-sm":["Inter"],"metric-val":["Inter"],"headline-lg-mobile":["Inter"],"label-md":["Inter"],"headline-lg":["Inter"],"body-lg":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"metric-val":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col min-h-0"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-sm overflow-hidden"><img alt="Brand logo. - Primary color: #2563eb
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WnbwJr7plaWo3cNeU0RBa6RuI-NXPYoMTsw0BiLDZtPDXW15i2ZT9vfWPC0pwc1zJl8cXgwyzr4jfBvFC7_RLPIGTDbu6n8rvyy7i4bntOmAO85-xyS4YdQYaXWW8d2L0OOdOutW4DBdFGUR1dZBlnYF-7Sc2t6DxsF9EaKKBQ_O0NKoxf4Dpv5XgFG5OdzS5XZEVQrolTmhKardx9Yeplip6xZUBXrktwK0CWgLZMFHodZUDzeyZ5rQ"><div class="flex flex-col truncate"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold tracking-tight">GraduAI</span><span class="font-label-sm text-label-sm text-on-surface-variant">Academic Admin</span></div></div><span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">v2.4</span></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">학사 DB 동기화</span></div><span class="font-label-sm text-label-sm text-primary font-medium">정상 (00:04전)</span></div></div><nav class="flex-1 px-space-sm py-space-xs space-y-0.5 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">학사 행정 관리</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="admin-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>관리자 대시보드</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="student-management" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>학생 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="course-management" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>과목 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="academic-calendar" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span>학사 일정 관리</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="curriculum-policy" href="#"><span class="material-symbols-outlined text-[20px]">rule</span><span>수강 정책 관리</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="notices-management" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span>공지사항 관리</span></a><div class="px-space-sm pt-space-sm pb-1 font-label-sm text-label-sm text-outline font-semibold uppercase tracking-wider">시스템 및 보안</div><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="backup-restore" href="#"><span class="material-symbols-outlined text-[20px]">settings_backup_restore</span><span>백업 / 복구</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="operations-status" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>운영 현황</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="system-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>시스템 로그</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-md text-label-md" data-path="admin-accounts" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>관리자 계정</span></a></nav></div><div class="p-space-sm m-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">운영 DB 노드 #1</span><span class="px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-[10px] font-bold">CONNECTED</span></div><div class="text-[11px] text-outline truncate">PostgreSQL 15.4 • latency 12ms</div><div class="pt-1 flex items-center justify-between border-t border-outline-variant/30"><button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error hover:underline transition-all"><span class="material-symbols-outlined text-[16px]">logout</span>로그아웃</button><span class="font-label-sm text-[10px] text-outline">IP: 10.240.12.8</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-md text-label-md font-medium"><span class="material-symbols-outlined text-primary text-[18px]">apartment</span><span>성서캠퍼스 학사운영본부</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-primary-fixed/60 text-on-primary-fixed font-label-md text-label-md font-semibold"><span class="material-symbols-outlined text-[16px]">calendar_month</span><span>2025학년도 1학기 (정규)</span></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span>ERP 연동 활성</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><button class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button></div><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right leading-tight"><span class="font-label-md text-label-md font-semibold text-on-surface">김관리 차장</span><span class="font-label-sm text-[11px] text-on-surface-variant">학사지원팀 • 마스터권한</span></div><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida/AEtjO1VoH0LMl8yi21SZX7lUBiEyHzL4Dzj5Z2sJLHCnh1UWyyJPAozjyWyFjBrLxPv9PAfDqAr-araCASQt8D_Mb6SFsbdVb-pRTKJ_WwgyE8vGWD-QSbv3VWL9oCT_h_C_39nldiQwz5O2Lt5F7e70p9LdnHIK4WzDOdXBWk9Wlv7QDuj14oukMOVtwnvZ-zy91Xmk2E7ytj3SS6nrHZSUutrR6kYIRxoN9gohslrZlntptnFpw25zYRp1PJs"></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter py-space-lg space-y-space-lg max-w-[1720px] mx-auto w-full">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">통합 학사 포털 배포</span>
+<span class="text-outline font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> 실시간 동기화 활성
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">공지사항 관리</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          학생 포털 메인 및 수강신청 시스템에 노출되는 학사 공지사항을 작성, 수정, 게시 관리합니다. 중요 공지는 수강신청 장바구니 및 AI 시간표 추천 상단에 우선 고정 노출됩니다.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-center">
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-md text-label-md flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>배포 이력 로그</span>
+</button>
+<button class="px-space-md py-2.5 rounded-xl bg-primary-container text-on-primary hover:bg-primary transition-all font-label-md text-label-md font-semibold flex items-center gap-2 shadow-md hover:shadow-lg" onclick="document.getElementById('notice-editor-panel').scrollIntoView({behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>+ 신규 공지 작성</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">현재 게시 중 공지</span>
+<div class="font-metric-val text-metric-val text-on-surface font-bold">14<span class="text-base font-normal text-on-surface-variant ml-1">건</span></div>
+<span class="font-label-sm text-[11px] text-emerald-600 flex items-center gap-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 활성 채널 3개 반영 중
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/50 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">visibility</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">상단 고정 중요 공지</span>
+<div class="font-metric-val text-metric-val text-tertiary font-bold">3<span class="text-base font-normal text-on-surface-variant ml-1">/ 5 슬롯</span></div>
+<span class="font-label-sm text-[11px] text-tertiary flex items-center gap-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">push_pin</span> 학생 포털 최상단 핀
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">keep</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">이번 주 누적 조회수</span>
+<div class="font-metric-val text-metric-val text-on-surface font-bold">38,419<span class="text-base font-normal text-on-surface-variant ml-1">회</span></div>
+<span class="font-label-sm text-[11px] text-primary flex items-center gap-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> 수강신청 기간 대비 +42%
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">bar_chart</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">임시저장 초안</span>
+<div class="font-metric-val text-metric-val text-on-surface font-bold">2<span class="text-base font-normal text-on-surface-variant ml-1">건</span></div>
+<span class="font-label-sm text-[11px] text-outline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">edit_note</span> 작성 중인 문서 대기
+          </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">drafts</span>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline font-semibold mr-1">카테고리</span>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm" type="button">전체</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">수강신청</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">학사일정</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">시스템안내</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">졸업사정</button>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-outline font-medium">상태</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface outline-none cursor-pointer">
+<option value="all">전체 상태</option>
+<option selected="" value="active">게시중</option>
+<option value="draft">임시저장</option>
+<option value="closed">게시종료</option>
+</select>
+</div>
+<label class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary accent-primary" id="pinned-filter" type="checkbox">
+<span class="font-label-md text-label-md font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">push_pin</span> 중요공지만 보기
+            </span>
+</label>
+<div class="relative min-w-[260px] flex-1 sm:flex-none">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full pl-9 pr-4 py-2 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" placeholder="제목, 작성자, 부서명 검색..." type="text">
+</div>
+<button class="p-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest">
+<table class="w-full text-left border-collapse min-w-[1080px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<th class="py-3 px-4 font-semibold text-center w-14">번호</th>
+<th class="py-3 px-3 font-semibold text-center w-14">중요</th>
+<th class="py-3 px-4 font-semibold w-28">카테고리</th>
+<th class="py-3 px-4 font-semibold">제목</th>
+<th class="py-3 px-4 font-semibold w-40">작성자</th>
+<th class="py-3 px-4 font-semibold w-28 text-center">작성일</th>
+<th class="py-3 px-4 font-semibold w-44 text-center">게시기간</th>
+<th class="py-3 px-4 font-semibold w-24 text-center">상태</th>
+<th class="py-3 px-4 font-semibold w-24 text-right">조회수</th>
+<th class="py-3 px-4 font-semibold w-36 text-center">관리</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-tertiary-fixed/15">
+<td class="py-3.5 px-4 text-center text-outline font-label-sm text-label-sm">1</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container shadow-xs" title="상단 고정 중요 공지">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">수강신청</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface hover:text-primary cursor-pointer transition-colors">2026학년도 2학기 AI 시간표 추천 및 수강신청 사전 안내</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-error text-[10px] font-bold">POPUP</span>
+</div>
+<div class="text-[12px] text-outline mt-0.5 flex items-center gap-2">
+<span>첨부파일 2건 (PDF, HWPX)</span>
+<span>•</span>
+<span>타겟: 전 학년 재학생</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md">
+<div class="flex flex-col">
+<span class="font-medium">김관리</span>
+<span class="text-[11px] text-outline">학사지원팀</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm text-on-surface-variant">2026.10.01</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm">
+<span class="text-on-surface">2026.10.01</span>
+<span class="text-outline mx-1">~</span>
+<span class="text-on-surface">10.15</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 게시중
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right font-metric-val text-label-md font-semibold text-on-surface">4,210회</td>
+<td class="py-3.5 px-4 text-center">
+<div class="flex items-center justify-center gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">수정</button>
+<button class="px-2 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button">숨김</button>
+<button class="p-1 rounded-lg text-outline hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-tertiary-fixed/15">
+<td class="py-3.5 px-4 text-center text-outline font-label-sm text-label-sm">2</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container shadow-xs" title="상단 고정 중요 공지">
+<span class="material-symbols-outlined text-[16px]">push_pin</span>
+</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">졸업사정</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface hover:text-primary cursor-pointer transition-colors">2026년도 후기 컴퓨터공학전공 졸업요건(ABEK) 사전 점검 요청</span>
+</div>
+<div class="text-[12px] text-outline mt-0.5 flex items-center gap-2">
+<span>첨부파일 1건 (XLSX)</span>
+<span>•</span>
+<span>대상: 공과대학 4학년 1학기 이상</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md">
+<div class="flex flex-col">
+<span class="font-medium">공과대학 교학팀</span>
+<span class="text-[11px] text-outline">담당: 이조교</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm text-on-surface-variant">2026.09.28</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm">
+<span class="text-on-surface">2026.09.28</span>
+<span class="text-outline mx-1">~</span>
+<span class="text-on-surface">10.30</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 게시중
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right font-metric-val text-label-md font-semibold text-on-surface">2,890회</td>
+<td class="py-3.5 px-4 text-center">
+<div class="flex items-center justify-center gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">수정</button>
+<button class="px-2 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button">숨김</button>
+<button class="p-1 rounded-lg text-outline hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 text-center text-outline font-label-sm text-label-sm">3</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-outline-variant">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">시스템안내</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface hover:text-primary cursor-pointer transition-colors">GraduAI 학사 DB 연동 정기 점검 안내 (10/05 02:00~04:00)</span>
+</div>
+<div class="text-[12px] text-outline mt-0.5">서버 순단 및 단절 예상 시간 포함</div>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md">
+<div class="flex flex-col">
+<span class="font-medium">박엔지니어</span>
+<span class="text-[11px] text-outline">전산운영팀</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm text-on-surface-variant">2026.09.25</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">2026.09.25</span>
+<span class="text-outline mx-1">~</span>
+<span class="text-on-surface-variant">10.05</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm font-medium">
+                  게시종료
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right font-metric-val text-label-md font-semibold text-outline">1,420회</td>
+<td class="py-3.5 px-4 text-center">
+<div class="flex items-center justify-center gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">수정</button>
+<button class="px-2.5 py-1 rounded-lg bg-primary-fixed text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm font-semibold" type="button">재게시</button>
+<button class="p-1 rounded-lg text-outline hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 text-center text-outline font-label-sm text-label-sm">4</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-outline-variant">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">학사일정</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface hover:text-primary cursor-pointer transition-colors">2026-2학기 개설교과목 및 강의계획서 열람 개시 안내</span>
+</div>
+<div class="text-[12px] text-outline mt-0.5">수강희망과목 담기 연계</div>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md">
+<div class="flex flex-col">
+<span class="font-medium">학사지원팀</span>
+<span class="text-[11px] text-outline">담당자 일동</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm text-on-surface-variant">2026.09.15</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant">2026.09.15</span>
+<span class="text-outline mx-1">~</span>
+<span class="text-on-surface-variant">09.30</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-outline font-label-sm text-label-sm font-medium">
+                  게시종료
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right font-metric-val text-label-md font-semibold text-outline">3,550회</td>
+<td class="py-3.5 px-4 text-center">
+<div class="flex items-center justify-center gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">수정</button>
+<button class="px-2 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button">숨김</button>
+<button class="p-1 rounded-lg text-outline hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 text-center text-outline font-label-sm text-label-sm">5</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full text-outline-variant">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">수강신청</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface hover:text-primary cursor-pointer transition-colors">교양 이수구분 변경 및 균형교양 영역 개편 사항 공지</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-[10px]">AI 추천 규칙 반영</span>
+</div>
+<div class="text-[12px] text-outline mt-0.5">2023학번 이후 필수 이수영역 체계 변경표 포함</div>
+</td>
+<td class="py-3.5 px-4 font-label-md text-label-md">
+<div class="flex flex-col">
+<span class="font-medium">교양교육센터</span>
+<span class="text-[11px] text-outline">운영담당</span>
+</div>
+</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm text-on-surface-variant">2026.09.10</td>
+<td class="py-3.5 px-4 text-center font-label-sm text-label-sm">
+<span class="text-on-surface">2026.09.10</span>
+<span class="text-outline mx-1">~</span>
+<span class="text-on-surface">11.01</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 게시중
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right font-metric-val text-label-md font-semibold text-on-surface">5,120회</td>
+<td class="py-3.5 px-4 text-center">
+<div class="flex items-center justify-center gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm" type="button">수정</button>
+<button class="px-2 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm" type="button">숨김</button>
+<button class="p-1 rounded-lg text-outline hover:text-error transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>총 48개 공지사항 중 1-5 표시</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-outline hover:text-on-surface disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary font-semibold flex items-center justify-center" type="button">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-low flex items-center justify-center" type="button">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-low flex items-center justify-center" type="button">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container-low flex items-center justify-center" type="button">10</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-md space-y-space-lg" id="notice-editor-panel">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-sm gap-2">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">edit_document</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">신규 공지 작성 및 에디터</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">지정된 채널과 학생 대상 맞춤 설정으로 학사 공지를 즉시 배포합니다.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 자동 임시저장 활성화 (방금 저장됨)
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<div class="xl:col-span-8 space-y-space-md">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">공지 제목 <span class="text-error">*</span></label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md outline-none placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" placeholder="학생들에게 명확히 전달될 수 있도록 공지 핵심 내용을 입력하세요" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">카테고리 선택 <span class="text-error">*</span></label>
+<select class="w-full px-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all">
+<option selected="" value="course">수강신청 (Course Registration)</option>
+<option value="schedule">학사일정 (Academic Schedule)</option>
+<option value="system">시스템안내 (System Notice)</option>
+<option value="graduation">졸업사정 (Graduation Policy)</option>
+<option value="general">일반학사 (General Affairs)</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">게시 기간 설정 (시작일 ~ 종료일) <span class="text-error">*</span></label>
+<div class="grid grid-cols-2 gap-2">
+<input class="w-full px-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" type="date" value="2026-10-05">
+<input class="w-full px-3 py-2 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20" type="date" value="2026-10-20">
+</div>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-semibold text-on-surface">본문 에디터 <span class="text-error">*</span></label>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-1 rounded hover:bg-surface-container text-[16px] material-symbols-outlined" type="button">format_bold</button>
+<button class="p-1 rounded hover:bg-surface-container text-[16px] material-symbols-outlined" type="button">format_italic</button>
+<button class="p-1 rounded hover:bg-surface-container text-[16px] material-symbols-outlined" type="button">format_underlined</button>
+<button class="p-1 rounded hover:bg-surface-container text-[16px] material-symbols-outlined" type="button">format_list_bulleted</button>
+<button class="p-1 rounded hover:bg-surface-container text-[16px] material-symbols-outlined" type="button">link</button>
+<button class="p-1 rounded hover:bg-surface-container text-[16px] material-symbols-outlined" type="button">image</button>
+</div>
+</div>
+<textarea class="w-full p-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md outline-none placeholder:text-outline focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all leading-relaxed resize-none" placeholder="학사 공지 본문을 상세히 작성하세요. 수강편람 링크, 관련 서식 다운로드 안내 등을 Markdown 형식으로 작성할 수 있습니다." rows="9"></textarea>
+</div>
+<div class="space-y-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface">첨부파일 업로드</label>
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[32px] text-primary mb-1">cloud_upload</span>
+<p class="font-label-md text-label-md text-on-surface font-medium">문서 또는 이미지 파일을 마우스로 끌어오거나 클릭하여 업로드</p>
+<span class="font-label-sm text-[11px] text-outline mt-0.5">PDF, HWPX, DOCX, XLSX, PNG (파일당 최대 25MB, 최대 5개)</span>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 space-y-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-md">
+<div class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span>배포 및 노출 옵션</span>
+</div>
+<div class="space-y-3">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:shadow-xs transition-shadow">
+<input checked="" class="mt-1 w-4 h-4 rounded text-tertiary focus:ring-tertiary accent-tertiary" type="checkbox">
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">push_pin</span> 상단 고정 중요 공지
+                  </span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+                    학생 대시보드 및 수강신청 메인 최상단에 핀으로 고정 노출됩니다.
+                  </p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:shadow-xs transition-shadow">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox">
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">tab_unselected</span> 학생 화면 팝업 모달 노출
+                  </span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+                    로그인 즉시 중앙 레이어 팝업으로 1회 강제 노출 (오늘 하루 보지 않기 옵션 제공).
+                  </p>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-lowest cursor-pointer hover:shadow-xs transition-shadow">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary" type="checkbox">
+<div>
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">smart_toy</span> AI 추천 알고리즘 컨텍스트 연계
+                  </span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+                    졸업 시뮬레이션 및 교과목 추천 엔진에 공지 사항의 변경 규칙을 동적 반영합니다.
+                  </p>
+</div>
+</label>
+</div>
+<div class="pt-2 border-t-0 space-y-2">
+<span class="font-label-sm text-label-sm text-outline font-semibold">노출 대상자 타겟팅</span>
+<div class="grid grid-cols-2 gap-2 text-[12px]">
+<button class="py-2 px-2.5 rounded-lg bg-primary-container text-on-primary font-semibold text-center" type="button">전체 재학생</button>
+<button class="py-2 px-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors text-center" type="button">단과대 / 전공별</button>
+<button class="py-2 px-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors text-center" type="button">학년별 지정</button>
+<button class="py-2 px-2.5 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors text-center" type="button">졸업예정자 한정</button>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">모바일 학생 화면 미리보기</span>
+<span class="material-symbols-outlined text-[16px] text-outline">smartphone</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-inner space-y-2">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-tertiary text-[10px] font-bold">중요</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">수강신청</span>
+</div>
+<div class="font-body-sm text-[13px] font-semibold text-on-surface leading-snug">
+                [공지] 입력된 제목이 이곳에 실시간 렌더링됩니다.
+              </div>
+<div class="text-[10px] text-outline flex items-center justify-between">
+<span>학사지원팀</span>
+<span>2026.10.05</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">verified</span>
+<span>공지 등록 시 즉시 학사 포털 캐시 무효화 및 실시간 전파 처리됩니다.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+            취소
+          </button>
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>임시저장</span>
+</button>
+<button class="px-6 py-2.5 rounded-xl bg-primary-container text-on-primary font-semibold font-label-md text-label-md hover:bg-primary transition-all shadow-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>공지 등록 및 즉시 배포</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#b4c5ff","primary-fixed":"#dbe1ff","on-tertiary-container":"#f6edff","surface-variant":"#dae2fd","surface-container-high":"#e2e7ff","surface-dim":"#d2d9f4","background":"#faf8ff","on-background":"#131b2e","secondary-fixed":"#e2dfff","surface-container":"#eaedff","on-error":"#ffffff","on-primary":"#ffffff","surface-container-highest":"#dae2fd","secondary-container":"#645efb","tertiary-fixed":"#e9ddff","primary":"#004ac6","surface":"#faf8ff","secondary-fixed-dim":"#c3c0ff","outline":"#737686","surface-tint":"#0053db","error":"#ba1a1a","on-secondary-fixed":"#0f0069","on-error-container":"#93000a","on-tertiary-fixed":"#23005c","on-surface":"#131b2e","surface-bright":"#faf8ff","secondary":"#4b41e1","on-primary-container":"#eeefff","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#3323cc","on-tertiary-fixed-variant":"#5516be","tertiary-container":"#7d4ce7","on-secondary":"#ffffff","surface-container-low":"#f2f3ff","primary-container":"#2563eb","surface-container-lowest":"#ffffff","inverse-surface":"#283044","inverse-primary":"#b4c5ff","on-primary-fixed":"#00174b","outline-variant":"#c3c6d7","on-secondary-container":"#fffbff","error-container":"#ffdad6","on-surface-variant":"#434655","tertiary-fixed-dim":"#d0bcff","inverse-on-surface":"#eef0ff","on-primary-fixed-variant":"#003ea8","tertiary":"#632ecd"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1.25rem","space-xs":"0.25rem","space-sm":"0.5rem","margin-sm":"1rem","margin":"2rem","gutter-sm":"0.75rem","space-lg":"1.5rem","space-md":"1rem","space-xl":"2rem"},fontFamily:{"headline-sm":["Inter"],"headline-lg-mobile":["Inter"],"headline-lg":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"metric-val":["Inter"]},fontSize:{"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"display-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"500"}],"metric-val":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="GraduAI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4A0iQwCJ6FiJhAfwzH_7Y4cqyRzAw6stZjifZrcx9teDtkCZiayaS1gFbOJwu-KVHEBhLToBq6wNUEKZSloiknMm594AmUHoWKJWPkWht0-cKh_OK7VkATsxisCRZP-JUJcWsnxn2wOO751rdUCtCns_tg8pInD_RMtohiHQ2963DOpK2xwvELSVswaSVC4AKWH7EbsTx1rfL14uUzAU2_tJSlqyhI8gcFdvC5pmtUrhUzYAULZKjz3U"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">GraduAI</span></div><div class="h-4 w-px bg-outline-variant hidden sm:block"></div><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container rounded-full"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">2026학년도 2학기</span></div></div><nav class="hidden xl:flex items-center gap-1"><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="dashboard" href="#">대시보드</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold shadow-sm transition-colors" data-path="curriculum-catalog" href="#">교과과정 편람</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="graduation-requirements" href="#">졸업요건 분석</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="ai-course-recommendation" href="#">AI 과목 추천</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="ai-timetable-generator" href="#">AI 시간표 생성·비교</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="saved-timetables" href="#">내 보관 시간표</a></nav><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden md:block"><div class="flex items-center justify-end gap-space-xs"><span class="font-label-md text-label-md text-on-surface font-semibold">신짱구</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-medium">3학년</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">컴퓨터공학전공 · 20210001</span></div><img alt="Profile" class="w-9 h-9 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1VoH0LMl8yi21SZX7lUBiEyHzL4Dzj5Z2sJLHCnh1UWyyJPAozjyWyFjBrLxPv9PAfDqAr-araCASQt8D_Mb6SFsbdVb-pRTKJ_WwgyE8vGWD-QSbv3VWL9oCT_h_C_39nldiQwz5O2Lt5F7e70p9LdnHIK4WzDOdXBWk9Wlv7QDuj14oukMOVtwnvZ-zy91Xmk2E7ytj3SS6nrHZSUutrR6kYIRxoN9gohslrZlntptnFpw25zYRp1PJs"></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col justify-between p-space-md overflow-y-auto"><div class="flex flex-col gap-space-lg"><div><div class="px-space-sm mb-space-sm font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">학업 솔루션 메뉴</div><nav class="flex flex-col gap-1"><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="">대시보드</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md bg-primary text-on-primary font-semibold shadow-sm transition-colors" data-path="curriculum-catalog" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="">교과과정 편람</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="graduation-requirements" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="">졸업요건 분석</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ai-course-recommendation" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="">AI 과목 추천</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="ai-timetable-generator" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="">AI 시간표 생성·비교</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="saved-timetables" href="#"><span class="material-symbols-outlined text-[20px]">bookmark_border</span><span class="">내 보관 시간표</span></a><a class="flex items-center gap-space-sm px-space-sm py-2.5 rounded-xl font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="profile-edit" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="">개인정보 수정</span></a></nav></div><div class="p-space-md rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">졸업이수율 요약</span><span class="font-label-sm text-label-sm text-primary font-bold">78%</span></div><div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mb-space-xs"><div class="bg-primary h-full rounded-full" style="width: 78%"></div></div><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span class="">취득 102학점</span><span class="">기준 130학점</span></div></div></div><div class="pt-space-md"><div class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between cursor-pointer hover:bg-surface-container-high transition-colors"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">support_agent</span><span class="font-label-sm text-label-sm text-on-surface font-medium">학사지도 상담예약</span></div><span class="material-symbols-outlined text-[16px] text-on-surface-variant">chevron_right</span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-background px-gutter min-h-screen"><div class="flex flex-col w-full">
+<!-- Visual Ambient Header Banner with subtle decorative elements -->
+<div class="relative w-full rounded-2xl bg-surface-container-low p-space-lg mb-space-lg shadow-sm overflow-hidden">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-20 w-60 h-60 rounded-full bg-tertiary/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<!-- Title & Breadcrumb Block -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">홈</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary transition-colors">교과과정 편람</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">컴퓨터공학전공 (2021 교육과정)</span>
+</div>
+<div class="flex items-center gap-space-sm mt-1 flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            2021학번 컴퓨터공학전공 교과과정 편람
+          </h1>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+            최신 개정판 ver 2.4
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-medium">
+            공학인증(ABEEK) 대응
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          학년별 표준 권장 이수트랙, 과목 간 선수요건 계통도 및 졸업 요건을 한눈에 점검하고 맞춤형 수강 경로를 탐색합니다.
+        </p>
+</div>
+<!-- Action buttons & Personal Overlay switch -->
+<div class="flex flex-wrap items-center gap-space-sm pt-2 xl:pt-0">
+<button class="group flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow transition-all text-on-surface" id="toggle-overlay-btn" type="button">
+<div class="w-8 h-4 rounded-full bg-primary flex items-center p-0.5 transition-colors" id="overlay-switch-bg">
+<div class="w-3 h-3 rounded-full bg-surface-container-lowest transform translate-x-4 transition-transform" id="overlay-switch-knob"></div>
+</div>
+<span class="font-label-md text-label-md font-semibold text-primary" id="overlay-label">내 이수과목 표시 ON</span>
+</button>
+<a class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium shadow-sm hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="">PDF 편람 다운로드</span>
+</a>
+<a class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm hover:bg-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span class="">이수표 인쇄</span>
+</a>
+</div>
+</div>
+</div>
+<!-- AI 맞춤 편람 가이드 위젯 (GraduAI Insight Callout) -->
+<section class="mb-space-lg">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-fixed to-tertiary-fixed p-space-md shadow-sm">
+<div class="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-primary/10 blur-xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">신짱구 학생을 위한 3학년 2학기 편람 가이드</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">중요도 최우선</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              4학년 1학기 졸업 필수인 <strong class="text-primary font-semibold">전공종합설계 I (캡스톤 CSE4001)</strong>의 수강 자격을 갖추려면 이번 학기에 반드시 <strong class="text-secondary font-semibold">소프트웨어공학 (CSE3012)</strong>을 이수해야 합니다.
+            </p>
+<!-- 선수과목 계통도 시각화 -->
+<div class="flex flex-wrap items-center gap-space-xs mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">선수계통도:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-medium flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> 자료구조 (A+ 이수)
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-medium flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> 알고리즘 및 분석 (A+ 이수)
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-bold flex items-center gap-1 shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[14px]">flag</span> 소프트웨어공학 [이번 학기 필수]
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline">arrow_forward</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium">
+                캡스톤디자인 (4학년 진입예정)
+              </span>
+</div>
+</div>
+</div>
+<div class="flex flex-row lg:flex-col gap-space-xs shrink-0 w-full lg:w-auto">
+<button class="flex-1 lg:flex-none flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-md hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">playlist_add_check</span>
+<span class="">추천과목 수강바구니 담기 (6학점)</span>
+</button>
+<button class="flex items-center justify-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-lowest/80 text-on-surface font-label-sm text-label-sm hover:bg-surface-container-lowest transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span class="">AI 시뮬레이션 상세 보기</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Filters & Search Toolbar -->
+<section class="mb-space-lg">
+  <div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md border-b-0">
+    <!-- Header & Campus Badge -->
+    <div class="flex flex-wrap items-center justify-between gap-space-sm pb-1">
+      <div class="flex items-center gap-space-sm">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+          <h3 class="font-headline-sm text-headline-sm text-on-surface font-bold text-[16px]">개설강좌 통합 편람 검색</h3>
+        </div>
+        <!-- Campus fixed badge from reference image -->
+        <div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+          <span class="material-symbols-outlined text-primary text-[14px]">apartment</span>
+          <span class="">캠퍼스: <strong class="text-primary font-semibold">성서</strong> (기본 고정)</span>
+        </div>
+      </div>
+      <!-- Remote Course & Night Session Fast Toggles -->
+      <div class="flex items-center gap-space-md flex-wrap font-label-sm text-label-sm">
+        <label class="flex items-center gap-1.5 cursor-pointer text-on-surface-variant hover:text-on-surface select-none">
+          <input class="rounded text-primary focus:ring-primary w-3.5 h-3.5" id="filter-remote-only" type="checkbox">
+          <span class="font-medium">원격수업(비대면/LMS)만 조회</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer text-on-surface-variant hover:text-on-surface select-none">
+          <input class="rounded text-primary focus:ring-primary w-3.5 h-3.5" id="filter-uncompleted" type="checkbox">
+          <span class="">미이수 과목만 보기</span>
+        </label>
+        <label class="flex items-center gap-1.5 cursor-pointer text-on-surface-variant hover:text-on-surface select-none">
+          <input class="rounded text-primary focus:ring-primary w-3.5 h-3.5" id="filter-prereq-met" type="checkbox">
+          <span class="">선수과목 충족만 보기</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Main Search & Tabs -->
+    <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+      <!-- Search Bar -->
+      <div class="relative flex-1">
+        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+        <input class="w-full pl-10 pr-10 py-2.5 rounded-xl bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/20 transition-all" id="curriculum-search" placeholder="과목명, 학수번호(예: CSE3012), 담당교수명, 키워드 검색" type="text">
+        <button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface hidden" id="search-clear" type="button">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <!-- Major vs General Education Primary Tabs (Reference Screen 2 & 3) -->
+      <div class="flex items-center gap-1 p-1 rounded-xl bg-surface-container-low overflow-x-auto">
+        <button class="px-3.5 py-1.5 rounded-lg font-label-md text-label-md font-semibold bg-surface-container-lowest text-primary shadow-sm flex items-center gap-1.5" id="tab-major" type="button">
+          <span class="material-symbols-outlined text-[16px]">school</span>
+          <span class="">전공 강좌 검색</span>
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1.5" id="tab-general" type="button">
+          <span class="material-symbols-outlined text-[16px]">local_library</span>
+          <span class="">교양 강좌 검색</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- University System Multi-Select Filter Bar (Exact Match from Captured Images) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm pt-1">
+      <!-- 1. 이수구분 드롭다운 (전공: 전공필수, 전공선택, 전공기초 / 교양: 공통교양, 균형교양, 교직, 일반교양) -->
+      <div class="flex flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          <span class="">이수구분</span>
+        </label>
+        <select class="w-full py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer" id="filter-completion-type">
+          <option value="all">전체 (전공+교양)</option>
+          <option selected="" value="major-required">전공필수</option>
+          <option value="major-elective">전공선택</option>
+          <option value="major-base">전공기초</option>
+          <option value="general-common">공통교양</option>
+          <option value="general-balanced">균형교양</option>
+          <option value="general-teaching">교직</option>
+          <option value="general-normal">일반교양</option>
+        </select>
+      </div>
+
+      <!-- 2. 사용언어 드롭다운 (전체, 국어/한국어, 영어, 중국어, 일어, 독일어, 러시아어, 스페인어, 불어 등) -->
+      <div class="flex flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+          <span class="">사용언어</span>
+        </label>
+        <select class="w-full py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer" id="filter-language">
+          <option selected="" value="all">전체</option>
+          <option value="ko">한국어 (국어)</option>
+          <option value="en">영어 (English)</option>
+          <option value="zh">중국어</option>
+          <option value="ja">일어</option>
+          <option value="de">독일어</option>
+          <option value="ru">러시아어</option>
+          <option value="es">스페인어</option>
+          <option value="fr">불어</option>
+          <option value="others">기타 외국어</option>
+        </select>
+      </div>
+
+      <!-- 3. 수업구분 (주/야간) & 요일 -->
+      <div class="flex flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+          <span class="">수업 구분 (주·야)</span>
+        </label>
+        <select class="w-full py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer" id="filter-day-night">
+          <option selected="" value="all">전체 (주간 + 야간)</option>
+          <option value="day">주간 강좌</option>
+          <option value="night">야간 강좌</option>
+        </select>
+      </div>
+
+      <!-- 4. 학년별 필터 드롭다운 -->
+      <div class="flex flex-col gap-1">
+        <label class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          <span class="">개설 학년</span>
+        </label>
+        <select class="w-full py-2 px-3 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer" id="filter-grade-select">
+          <option value="all">전체 학년</option>
+          <option value="1">1학년 (기초소양)</option>
+          <option value="2">2학년 (핵심전공)</option>
+          <option selected="" value="3">3학년 (전공심화 - 현재)</option>
+          <option value="4">4학년 (응용·캡스톤)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Quick Category Badges & Academic Requirements Summary -->
+    <div class="flex flex-wrap items-center justify-between gap-space-sm pt-1 border-t border-outline-variant/30">
+      <div class="flex flex-wrap items-center gap-1.5">
+        <span class="font-label-sm text-label-sm text-outline mr-1">빠른 선택:</span>
+        <button class="category-chip px-3 py-1 rounded-full font-label-sm text-label-sm font-semibold bg-primary text-on-primary shadow-sm" type="button">
+          전체보기 (48)
+        </button>
+        <button class="category-chip px-3 py-1 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          전공필수 (8)
+        </button>
+        <button class="category-chip px-3 py-1 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          전공선택 (26)
+        </button>
+        <button class="category-chip px-3 py-1 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          공통/균형교양 (10)
+        </button>
+        <button class="category-chip px-3 py-1 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors" type="button">
+          캡스톤·종합설계 (4)
+        </button>
+      </div>
+      <div class="flex items-center gap-1 text-primary font-label-sm text-label-sm font-medium">
+        <span class="material-symbols-outlined text-[16px]">info</span>
+        <span class="">졸업 기준 전공 72학점 중 45학점 취득완료 (잔여 전필 6학점)</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 학년별 정규 이수 체계 로드맵 (Curriculum Flowchart Track Matrix) -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">학년·학기별 표준 교육과정 로드맵</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">4개년 이수 체계도</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-md font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-3 h-3 rounded bg-primary/20 flex items-center justify-center text-primary text-[10px] font-bold">✓</span> 이수완료
+        </span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> 현재학기 / 수강예정
+        </span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span> 필수 미이수
+        </span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span> 향후 개설
+        </span>
+</div>
+</div>
+<!-- 4-Column Track Flow Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- 1학년 Column (기초소양 & 전공기초) -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold text-label-sm">1</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">1학년 (기초소양)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">전공탐색 &amp; 수학·기초코딩</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">모두 이수 완료 (100%)</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Semester 1 -->
+<div class="font-label-sm text-label-sm text-outline font-semibold pt-1">1학기</div>
+<!-- Card: C프로그래밍 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-base" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE1001 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> A+
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">C프로그래밍 및 실습</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">전공기초</span>
+<span class="text-primary font-medium">선수과목 충족기반</span>
+</div>
+</div>
+<!-- Card: 이산수학 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-base" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE1003 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> A0
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">이산수학 (Discrete Math)</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">전공기초</span>
+<span class="">선형대수 선수</span>
+</div>
+</div>
+<!-- Semester 2 -->
+<div class="font-label-sm text-label-sm text-outline font-semibold pt-2">2학기</div>
+<!-- Card: 파이썬프로그래밍 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-base" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE1004 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> A+
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">고급파이썬프로그래밍</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">전공기초</span>
+<span class="">AI기초 트랙</span>
+</div>
+</div>
+<!-- Card: 대학글쓰기와영어 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="general" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">GEN1002 · 2학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> Pass
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">학술영어 및 전공작문</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">교양필수</span>
+<span class="">졸업인증 연계</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2학년 Column (핵심 전공기초) -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold text-label-sm">2</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">2학년 (핵심전공)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">CS 코어 &amp; 시스템 모델링</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">이수 완료 (100%)</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Semester 1 -->
+<div class="font-label-sm text-label-sm text-outline font-semibold pt-1">1학기</div>
+<!-- Card: 자료구조와 실습 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-core" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE2001 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> A+
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span class="">자료구조와 실습</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-bold">전필</span>
+</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">선수: C프로그래밍</span>
+<span class="text-secondary font-medium">알고리즘 선수과목</span>
+</div>
+</div>
+<!-- Card: 객체지향프로그래밍 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-elective" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE2003 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> A0
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">객체지향프로그래밍 (Java)</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">전공선택</span>
+<span class="">디자인패턴 선수</span>
+</div>
+</div>
+<!-- Semester 2 -->
+<div class="font-label-sm text-label-sm text-outline font-semibold pt-2">2학기</div>
+<!-- Card: 컴퓨터구조 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-core" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE2004 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> B+
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span class="">컴퓨터구조 (Computer Org)</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-bold">전필</span>
+</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">선수: C프로그래밍</span>
+<span class="">운영체제 선수</span>
+</div>
+</div>
+<!-- Card: 시스템프로그래밍 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-elective" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE2008 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span> A+
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">시스템프로그래밍 (Linux)</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">전공선택</span>
+<span class="">네트워크/보안 선수</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 3학년 Column (전공심화 - 현재 학년) [HIGHLIGHTED ACTIVE ZONE] -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-md shadow-md ring-2 ring-secondary/30 relative">
+<div class="absolute top-2.5 right-3">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest animate-ping"></span>
+            현재 학년
+          </span>
+</div>
+<div class="flex items-center gap-space-xs pb-space-sm mb-space-sm">
+<span class="w-6 h-6 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-bold text-label-sm">3</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">3학년 (전공심화)</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">실무 아키텍처 및 시스템 구축</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Semester 1 (Completed) -->
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-1">
+<span class="text-outline font-semibold">1학기 (지난 학기)</span>
+<span class="text-primary font-medium">3과목 이수완료</span>
+</div>
+<!-- Card: 알고리즘 및 분석 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-core" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE3001 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm">A+</span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span class="">알고리즘 및 분석</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-bold">전필</span>
+</div>
+</div>
+<!-- Card: 데이터베이스시스템 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-elective" data-status="completed">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE3005 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm">A+</span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold">데이터베이스 시스템</div>
+</div>
+<!-- Semester 2 (Current / Target Planning) -->
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-2">
+<span class="text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down_circle</span> 2학기 (수강신청 대상)
+            </span>
+<span class="text-secondary font-semibold">이번 학기</span>
+</div>
+<!-- Card: 소프트웨어공학 (CRITICAL RECOMMENDED) -->
+<div class="course-card p-space-sm rounded-xl bg-tertiary-fixed/40 hover:bg-tertiary-fixed/60 transition-all flex flex-col gap-1 relative overflow-hidden shadow-sm ring-1 ring-tertiary/40" data-category="major-core" data-status="recommended">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">CSE3012 · 3학점</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow-sm">
+<span class="material-symbols-outlined text-[12px]">priority_high</span> 필수추천
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-bold flex items-center justify-between">
+<span class="">소프트웨어공학</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-error text-on-error font-bold">전필 미이수</span>
+</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary font-medium">캡스톤 선수필수</span>
+<span class="font-medium text-tertiary">김교수 · 월2,수3</span>
+</div>
+</div>
+<!-- Card: 운영체제 (RECOMMENDED) -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-1 relative overflow-hidden shadow-sm" data-category="major-core" data-status="recommended">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm font-medium text-primary">CSE3002 · 3학점</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                AI추천
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span class="">운영체제 (Operating Systems)</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-error text-on-error font-bold">전필 미이수</span>
+</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">선수: 컴퓨터구조(B+)</span>
+<span class="text-on-surface-variant">이교수 · 화4,목4</span>
+</div>
+</div>
+<!-- Card: 인공지능개론 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-elective" data-status="unfulfilled">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE3020 · 3학점</span>
+<span class="font-label-sm text-label-sm text-outline">전공선택</span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-medium">인공지능개론 (Intro to AI)</div>
+<div class="pl-1.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">선수: 이산수학(이수)</span>
+<span class="">박교수 · 화2,목2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4학년 Column (실무응용 & 캡스톤) -->
+<div class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm border-b-0">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-lg bg-surface-container-high text-primary flex items-center justify-center font-bold text-label-sm">4</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">4학년 (응용·캡스톤)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">산학프로젝트 &amp; 졸업인증</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">향후 예정</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Semester 1 -->
+<div class="font-label-sm text-label-sm text-outline font-semibold pt-1">1학기 (차년도)</div>
+<!-- Card: 전공종합설계 I (캡스톤) -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="capstone" data-status="future">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE4001 · 2학점</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                졸업필수
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span class="">전공종합설계 I (캡스톤디자인)</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-bold">전필</span>
+</div>
+<div class="pl-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-error font-medium">선수필수: 소프트웨어공학</span>
+</div>
+</div>
+<!-- Card: 빅데이터분석실무 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-elective" data-status="future">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE4015 · 3학점</span>
+<span class="font-label-sm text-label-sm text-outline">전공선택</span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-medium">빅데이터분석실무</div>
+<div class="pl-1.5 text-on-surface-variant font-label-sm text-label-sm">선수: 데이터베이스</div>
+</div>
+<!-- Semester 2 -->
+<div class="font-label-sm text-label-sm text-outline font-semibold pt-2">2학기 (최종학기)</div>
+<!-- Card: 전공종합설계 II -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="capstone" data-status="future">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE4002 · 2학점</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                졸업논문대체
+              </span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span class="">전공종합설계 II (최종작품)</span>
+<span class="text-[10px] px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-bold">전필</span>
+</div>
+<div class="pl-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="">선수: 종합설계 I</span>
+</div>
+</div>
+<!-- Card: 클라우드컴퓨팅 & 데브옵스 -->
+<div class="course-card p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1 relative overflow-hidden" data-category="major-elective" data-status="future">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="flex items-center justify-between pl-1.5">
+<span class="font-label-sm text-label-sm text-outline">CSE4022 · 3학점</span>
+<span class="font-label-sm text-label-sm text-outline">전공선택</span>
+</div>
+<div class="pl-1.5 font-label-md text-label-md text-on-surface font-medium">클라우드 아키텍처 및 DevOps</div>
+<div class="pl-1.5 text-on-surface-variant font-label-sm text-label-sm">선수: 네트워크, 운영체제</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 교과목 상세 목록 테이블 (Detailed Subject Directory) -->
+<section class="mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">교육과정 교과목 상세 목록</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold" id="table-count-badge">총 12개 교과목 표시 중</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="">정렬:</span>
+<select class="bg-surface-container-lowest font-label-sm text-label-sm text-on-surface px-2 py-1 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" id="sort-select">
+<option value="year-asc">학년/학기 순</option>
+<option value="status">이수 상태 순</option>
+<option value="code">학수번호 순</option>
+<option value="name">과목명 가나다 순</option>
+</select>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto rounded-2xl bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm" id="curriculum-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
+<th class="py-3 px-4 font-semibold">학수번호</th>
+<th class="py-3 px-4 font-semibold min-w-[200px]">교과목명</th>
+<th class="py-3 px-4 font-semibold">이수구분</th>
+<th class="py-3 px-4 font-semibold text-center">학점 / 시수</th>
+<th class="py-3 px-4 font-semibold text-center">개설학기</th>
+<th class="py-3 px-4 font-semibold min-w-[160px]">선수과목 체계</th>
+<th class="py-3 px-4 font-semibold text-center">신짱구 학생 이수상태</th>
+<th class="py-3 px-4 font-semibold text-center">강의계획서</th>
+</tr>
+</thead>
+<tbody class="text-on-surface divide-y-0" id="curriculum-tbody">
+<!-- Row 1: 소프트웨어공학 (Crucial Target) -->
+<tr class="hover:bg-tertiary-fixed/20 transition-colors bg-tertiary-fixed/10">
+<td class="py-3 px-4 font-label-sm text-label-sm text-tertiary font-bold">CSE3012</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[15px]">소프트웨어공학</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold text-[10px]">
+                  이번 학기 필수추천
+                </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Software Engineering · 김태호 교수</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">3 / 3 (설계 1)</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">3학년 2학기</span>
+</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-medium">자료구조(충족)</span>
+<span class="text-outline">→</span>
+<span class="text-tertiary font-bold">본과목</span>
+</div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[13px]">priority_high</span> 미이수 (신청요망)
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 2: 운영체제 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-label-sm text-label-sm text-outline">CSE3002</td>
+<td class="py-3 px-4">
+<div class="font-label-md text-label-md text-on-surface font-semibold">운영체제</div>
+<span class="font-label-sm text-label-sm text-outline">Operating Systems · 이수진 교수</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">3 / 3</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">3학년 2학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-medium">컴퓨터구조(충족)</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">schedule</span> 수강 대기
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 3: 알고리즘 및 분석 (Completed) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-3 px-4 font-label-sm text-label-sm text-outline">CSE3001</td>
+<td class="py-3 px-4">
+<div class="font-label-md text-label-md text-on-surface font-semibold">알고리즘 및 분석</div>
+<span class="font-label-sm text-label-sm text-outline">Design and Analysis of Algorithms</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">3 / 3</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">3학년 1학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm">자료구조(충족)</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> 이수완료 (A+)
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-outline font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 4: 자료구조와 실습 (Completed) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-3 px-4 font-label-sm text-label-sm text-outline">CSE2001</td>
+<td class="py-3 px-4">
+<div class="font-label-md text-label-md text-on-surface font-semibold">자료구조와 실습</div>
+<span class="font-label-sm text-label-sm text-outline">Data Structures and Practice</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">3 / 4</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">2학년 1학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm">C프로그래밍(충족)</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> 이수완료 (A+)
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-outline font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 5: 컴퓨터구조 (Completed) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-low/40">
+<td class="py-3 px-4 font-label-sm text-label-sm text-outline">CSE2004</td>
+<td class="py-3 px-4">
+<div class="font-label-md text-label-md text-on-surface font-semibold">컴퓨터구조</div>
+<span class="font-label-sm text-label-sm text-outline">Computer Architecture</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">3 / 3</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">2학년 2학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm">디지털논리회로</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> 이수완료 (B+)
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-outline font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 6: 인공지능개론 (Elective) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-label-sm text-label-sm text-outline">CSE3020</td>
+<td class="py-3 px-4">
+<div class="font-label-md text-label-md text-on-surface font-semibold">인공지능개론</div>
+<span class="font-label-sm text-label-sm text-outline">Introduction to Artificial Intelligence</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">
+                전공선택
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">3 / 3</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">3학년 2학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-medium">이산수학, 파이썬</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+                미이수 (선택가능)
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 7: 전공종합설계 I (Capstone) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-label-sm text-label-sm text-tertiary font-bold">CSE4001</td>
+<td class="py-3 px-4">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold">전공종합설계 I (캡스톤디자인)</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold text-[10px]">
+                  졸업인증
+                </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Capstone Design Project I · 지도교수 배정</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">2 / 4 (설계 2)</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">4학년 1학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">소프트웨어공학 필수선수</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]">lock</span> 수강 자격 미충족
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-outline font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+<!-- Row 8: 전공종합설계 II (Capstone) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4 font-label-sm text-label-sm text-tertiary font-bold">CSE4002</td>
+<td class="py-3 px-4">
+<div class="font-label-md text-label-md text-on-surface font-semibold">전공종합설계 II (최종심사)</div>
+<span class="font-label-sm text-label-sm text-outline">Capstone Design Project II · 졸업논문대체</span>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+                전공필수
+              </span>
+</td>
+<td class="py-3 px-4 text-center font-medium">2 / 4 (설계 2)</td>
+<td class="py-3 px-4 text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm">4학년 2학기</span>
+</td>
+<td class="py-3 px-4">
+<span class="text-on-surface-variant font-label-sm text-label-sm">전공종합설계 I</span>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[13px]">lock</span> 수강 자격 미충족
+              </span>
+</td>
+<td class="py-3 px-4 text-center">
+<button class="inline-flex items-center gap-0.5 px-2.5 py-1 rounded-lg bg-surface-container text-outline font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span> 조회
+              </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Footer Notes -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm p-space-md mt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span class="">2021학번 졸업기준: 교양 32학점 + 전공필수 24학점 + 전공선택 48학점 = 총 130학점 이상 충족 필요</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors font-medium" type="button">이전</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-bold" type="button">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors" type="button">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors" type="button">3</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high transition-colors font-medium" type="button">다음</button>
+</div>
+</div>
+</section>
+<!-- Interactive Scripts for Filtering, Search, and Overlay Toggle -->
+<script>
+    (function initCurriculumHandbook() {
+      // 1. Student Overlay Toggle
+      const overlayBtn = document.getElementById('toggle-overlay-btn');
+      const switchBg = document.getElementById('overlay-switch-bg');
+      const switchKnob = document.getElementById('overlay-switch-knob');
+      const overlayLabel = document.getElementById('overlay-label');
+      let isOverlayOn = true;
+
+      if (overlayBtn && switchBg && switchKnob && overlayLabel) {
+        overlayBtn.addEventListener('click', () => {
+          isOverlayOn = !isOverlayOn;
+          if (isOverlayOn) {
+            switchBg.classList.replace('bg-outline-variant', 'bg-primary');
+            switchKnob.classList.replace('translate-x-0', 'translate-x-4');
+            overlayLabel.textContent = '내 이수과목 표시 ON';
+            overlayLabel.classList.add('text-primary');
+            document.querySelectorAll('[data-status="completed"]').forEach(el => el.classList.remove('opacity-40'));
+          } else {
+            switchBg.classList.replace('bg-primary', 'bg-outline-variant');
+            switchKnob.classList.replace('translate-x-4', 'translate-x-0');
+            overlayLabel.textContent = '내 이수과목 표시 OFF';
+            overlayLabel.classList.remove('text-primary');
+            document.querySelectorAll('[data-status="completed"]').forEach(el => el.classList.add('opacity-40'));
+          }
+        });
+      }
+
+      // 2. Grade Tab Filters
+      const gradeTabs = document.querySelectorAll('.grade-tab');
+      gradeTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          gradeTabs.forEach(t => {
+            t.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+            t.classList.add('text-on-surface-variant');
+          });
+          tab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+          tab.classList.remove('text-on-surface-variant');
+        });
+      });
+
+      // 3. Search Filter Logic
+      const searchInput = document.getElementById('curriculum-search');
+      const tableRows = document.querySelectorAll('#curriculum-tbody tr');
+      const countBadge = document.getElementById('table-count-badge');
+
+      if (searchInput && tableRows) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          let visibleCount = 0;
+
+          tableRows.forEach(row => {
+            const text = row.innerText.toLowerCase();
+            if (text.includes(query)) {
+              row.style.display = '';
+              visibleCount++;
+            } else {
+              row.style.display = 'none';
+            }
+          });
+
+          if (countBadge) {
+            countBadge.textContent = `총 ${visibleCount}개 교과목 표시 중`;
+          }
+        });
+      }
+
+      // 4. Uncompleted Only Checkbox
+      const uncompletedCheck = document.getElementById('filter-uncompleted');
+      if (uncompletedCheck && tableRows) {
+        uncompletedCheck.addEventListener('change', (e) => {
+          const checked = e.target.checked;
+          let visibleCount = 0;
+
+          tableRows.forEach(row => {
+            const isCompleted = row.innerText.includes('이수완료');
+            if (checked && isCompleted) {
+              row.style.display = 'none';
+            } else {
+              row.style.display = '';
+              visibleCount++;
+            }
+          });
+
+          if (countBadge) {
+            countBadge.textContent = `총 ${visibleCount}개 교과목 표시 중`;
+          }
+        });
+      }
+    })();
+  </script>
+</div></main></div>
+
+
+
+
+
+</body></html>
